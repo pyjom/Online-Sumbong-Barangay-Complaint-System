@@ -24,9 +24,9 @@ class Complaint(db.Model):
 
 
 # Load model and tokenizer
-model = AutoModelForSequenceClassification.from_pretrained("saved_model")
-tokenizer = AutoTokenizer.from_pretrained("saved_model")
-label_encoder = joblib.load("saved_model/label_encoder.pkl")
+model = AutoModelForSequenceClassification.from_pretrained("ml_model/saved_model")
+tokenizer = AutoTokenizer.from_pretrained("ml_model/saved_model")
+label_encoder = joblib.load("ml_model/saved_model/label_encoder.pkl")
 
 # Make sure model is in evaluation mode
 model.eval()
