@@ -49,6 +49,28 @@ python3 main
 http://localhost:9696/complaint
 ```
 
+## 📦 Folder Structure
+
+```
+Online-Sumbong-Barangay-Complaint-System/
+│
+├── main_app.py                # Flask app
+├── ml_model/
+│   ├── saved_model/           # tokenizer, model files
+│   ├── label_encoder.pkl
+│   └── test4.ipynb      # training notebook
+│
+├── templates/
+│   ├── complaint.html
+│   └── records.html
+│
+├── init_db.py
+├── requirements.txt
+├── README.md
+└── LICENSE
+
+```
+
 ## 🧠 Model Details
 
 - **Transformer** : XLM-RoBERTa Base
