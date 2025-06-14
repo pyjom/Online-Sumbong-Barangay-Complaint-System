@@ -1,0 +1,23 @@
+
+    <!doctype html>
+    <title>Submitted Complaints</title>
+    <h2>Complaint Records</h2>
+    <table border="1" cellpadding="5" cellspacing="0">
+        <tr>
+            <th>ID</th>
+            <th>Text</th>
+            <th>Predicted Category</th>
+            <th>Timestamp</th>
+        </tr>
+        {% for c in complaints %}
+        <tr>
+            <td>{{ c.id }}</td>
+            <td>{{ c.text }}</td>
+            <td>{{ c.category }}</td>
+            <td>{{ c.timestamp.strftime('%Y-%m-%d %H:%M:%S') }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="/complaint">← Back to classifier</a>
+    """
