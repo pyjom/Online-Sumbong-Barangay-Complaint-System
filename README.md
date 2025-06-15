@@ -31,19 +31,25 @@ pip install -r requirements.txt
 
 ```
 
-3. **Initialize the database**
+3. **Download the .safetensor from my personal google drive. It is around 1.11 GB**
+
+```
+https://drive.google.com/file/d/1CTQAQFW_fOLs4WysBYKZen74QWM7re_-/view?usp=sharing
+```
+
+4. **Initialize the database**
 
 ```bash
 python3 init_db.py
 ```
 
-4. **Run the web app**
+5. **Run the web app**
 
 ```bash
-python3 main
+python3 main_app.py
 ```
 
-5. **Access it locally**
+6. **Access it locally**
 
 ```bash
 http://localhost:9696/complaint
@@ -77,6 +83,13 @@ Online-Sumbong-Barangay-Complaint-System/
 - **Fine-tuned on** : Tagalog complaints dataset (800 training, 200 validation)
 - **Categories** : 'public concern (community and financial disputes)', 'public concern (garbage and sanitation)', 'public concern (infrastructure issues)', "public concern (programs and services)", "public concern (security and safety)"
 
-## 📌 Note
+## 🚀 Web app
+
+- Try writing complaints by going to **http://127.0.0.1:9696/complaint.** After clicking **classify,** it should provide the category right away.
+- You can check all the complains by going to **http://127.0.0.1:9696/records**
+
+![1749972289162](image/README/1749972289162.png)
+
+## ![1749972453881](image/README/1749972453881.png)📌 Note
 
 - The model file (`model.safetensors`) is too large for GitHub. It's excluded from the repo. For deployment, make sure to place it inside `model/saved_model/`.
