@@ -83,6 +83,14 @@ Online-Sumbong-Barangay-Complaint-System/
 - **Fine-tuned on** : Tagalog complaints dataset (800 training, 200 validation)
 - **Categories** : 'public concern (community and financial disputes)', 'public concern (garbage and sanitation)', 'public concern (infrastructure issues)', "public concern (programs and services)", "public concern (security and safety)"
 
+### 🤗 Model on Hugging Face
+
+You can explore and reuse the fine-tuned XLM-RoBERTa model here:
+
+```http
+https://huggingface.co/Jomsky/brgy-complaint-classifier/tree/main
+```
+
 ## 🚀 Web app
 
 - Try writing complaints by going to **http://127.0.0.1:9696/complaint.** After clicking **classify,** it should provide the category right away.
