@@ -23,10 +23,15 @@ class Complaint(db.Model):
     timestamp = db.Column(db.DateTime, default=datetime.utcnow)
 
 
-# Load model and tokenizer
-model = AutoModelForSequenceClassification.from_pretrained("ml_model/saved_model")
-tokenizer = AutoTokenizer.from_pretrained("ml_model/saved_model")
-label_encoder = joblib.load("ml_model/saved_model/label_encoder.pkl")
+# Will use the hugging face model instead
+HF_MODEL_ID = "Jomsky/brgy-complaint-classifier" 
+LOCAL_LABEL_ENCODER = "ml_model/saved_model/label_encoder.pkl"            
+
+
+# Changed the source
+model = AutoModelForSequenceClassification.from_pretrained(HF_MODEL_ID)
+tokenizer = AutoTokenizer.from_pretrained(HF_MODEL_ID)
+label_encoder = joblib.load(LOCAL_LABEL_ENCODER)
 
 # Make sure model is in evaluation mode
 model.eval()
