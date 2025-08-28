@@ -31,13 +31,7 @@ pip install -r requirements.txt
 
 ```
 
-3. **Download the .safetensor from my personal google drive. It is around 1.11 GB**
-
-```
-https://drive.google.com/file/d/1CTQAQFW_fOLs4WysBYKZen74QWM7re_-/view?usp=sharing
-```
-
-4. **Initialize the database**
+3. **Initialize the database**
 
 ```bash
 python3 init_db.py
@@ -55,6 +49,12 @@ python3 main_app.py
 http://localhost:9696/complaint
 ```
 
+7. **Access the login page** (The username and password are found in init_db.py)
+
+```bash
+http://localhost:9696/login
+```
+
 ## 📦 Folder Structure
 
 ```
@@ -69,6 +69,7 @@ Online-Sumbong-Barangay-Complaint-System/
 ├── templates/
 │   ├── complaint.html
 │   └── records.html
+|   └── login.html
 │
 ├── init_db.py
 ├── requirements.txt
@@ -88,8 +89,10 @@ Online-Sumbong-Barangay-Complaint-System/
 - Try writing complaints by going to **http://127.0.0.1:9696/complaint.** After clicking **classify,** it should provide the category right away.
 - You can check all the complains by going to **http://127.0.0.1:9696/records**
 
-![1749972289162](image/README/1749972289162.png)
+![1756380564302](image/README/1756380564302.png)
 
-## ![1749972453881](image/README/1749972453881.png)📌 Note
+![1756380645136](image/README/1756380645136.png)
+
+📌 Note
 
 - The model file (`model.safetensors`) is too large for GitHub. It's excluded from the repo. For deployment, make sure to place it inside `model/saved_model/`.
